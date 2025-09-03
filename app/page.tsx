@@ -94,7 +94,7 @@ export default function Dashboard() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold text-foreground text-balance">Bảng điều khiển</h1>
-              <p className="text-muted-foreground mt-1">Tổng quan các bộ tài sản.</p>
+              <p className="text-muted-foreground mt-1">Tổng quan tài sản</p>
             </div>
             <Select value={selectedSetType} onValueChange={setSelectedSetType}>
               <SelectTrigger className="w-[180px]"><SelectValue placeholder="Chọn một bộ..." /></SelectTrigger>
