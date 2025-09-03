@@ -45,7 +45,11 @@ export default function RootLayout({
     <html lang="vi">
       <body className={`${beVietnamPro.variable} font-sans`}>
         {/* Render Client Component mới để xử lý layout tương tác */}
-        <AppLayout>{children}</AppLayout>
+        <AppLayout>
+          <div className="lg:ml-64">
+            {children}
+          </div>
+        </AppLayout>
       </body>
     </html>
   )

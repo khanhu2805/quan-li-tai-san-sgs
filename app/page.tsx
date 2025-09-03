@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts"
@@ -22,6 +21,7 @@ const ASSET_SETS = {
   IPAD: "iPad",
   RIO_SET: "Bộ Rio",
   ROVER_SET: "Bộ Rover",
+  STEM_KIT: "Bộ STEM Kit",
 }
 
 // Dữ liệu giờ đây quản lý theo từng BỘ, không phải thiết bị lẻ
@@ -89,7 +89,7 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="lg:ml-64">
+      <div className="">
         <header className="bg-card border-b border-border p-4 lg:p-6">
           <div className="flex items-center justify-between">
             <div>
