@@ -1,11 +1,16 @@
 import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import { Analytics } from '@vercel/analytics/next'
+import { Be_Vietnam_Pro } from 'next/font/google'
 import './globals.css'
 
+const beVietnamPro = Be_Vietnam_Pro({
+  subsets: ['vietnamese', 'latin'],
+  weight: ['300', '400', '500', '700'],
+  display: 'swap',
+  variable: '--font-sans', // Gán biến CSS để có thể dùng trong tailwind.config
+})
+
 export const metadata: Metadata = {
-  title: 'v0 App',
+  title: 'Quản lí tài sản SGS',
   description: 'Created with v0',
   generator: 'v0.app',
 }
@@ -16,10 +21,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="vi">
+      <body className={`${beVietnamPro.variable} font-sans`}>
         {children}
-        <Analytics />
       </body>
     </html>
   )
